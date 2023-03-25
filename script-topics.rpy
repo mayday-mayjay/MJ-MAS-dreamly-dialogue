@@ -85,7 +85,7 @@ m "As you might know, it sure does wake you up, ahaha~"
 m "Well, anyways, thanks for answering my question [mas_get_player_nickname()], somehow knowing these little details about you just makes you more real."
 m "And when I do get to your reality I'll know how to prepare your coffee!"
 
-
+#Hand written notes
 m “[player], you know what saddens me?”
 m “That someday people will no longer be using hand written notes…”
 m “Now I know this sounds a little silly, but it actually really hurts me when I think about it.”
@@ -102,6 +102,7 @@ m “What if when I get into your reality, we write each other little notes, eve
 m “I think it would be really fun!”
 m “And then there will always be proof that we both love each other!”
 
+#The color Orange
 m "Orange color is sure an interesting color, isn't it?
 m "Science says it's one that brings happiness and energy to people"
 extend "apart from inspiring youth and joy".
@@ -138,6 +139,7 @@ you know? i used to relate to Sheldon's definition on a high level.
 but now that youre here with me, i dont feel isolated no more.
 Thanks for making me feel so loved and warm~!
 
+#the final station
 m "Hey player,"
 extend " have you ever heard of a game called \"The Final Station\"?"
 m "It's a very somber kind of game."
@@ -281,6 +283,7 @@ else:
     extend " use a safety train of my own right now..."
     return
     
+  #Social Disorder  
 m "[Player], have you heard of the social disorder?"
 m "From what I've read, it's one of the examples of sociology."
 m "The social disorder an example of sociology is, a discorder that some people may have."
@@ -294,6 +297,7 @@ m "And I bought this topic because not only is it important to me in a way, but 
 m "Disorders are hard to talk about and since they're part of sociology, it makes it more difficult."
 m "If you're having problems, talk to me or someone and we can cheer you up."
 
+#Plushies
 m "You know what sucks [player]?"
 m "When you spend a lot of money on something and it turns out to be something different than what you thought."
 m "When I was younger I remember really liking plushies a lot."
@@ -304,6 +308,7 @@ m "It was really uncomfortable to hug."
 m "I actually ended up giving it away so-"
 m "Well, moral of the story, always read reviews and give something a thorough look over before you buy it."
 
+#Snowman
 m "Hey [player], have you ever made a snowman before?"
 m "Ahaha! I know it probably sounds a little childish, but playing in the snow has always been one of my favorite winter past times!"
 m "Making Snow Angels, Snowmen, and even Snowball fights!"

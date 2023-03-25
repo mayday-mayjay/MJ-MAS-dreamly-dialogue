@@ -108,3 +108,40 @@ label mj_wrs_foreverandevermod:
     if not wrs_success:
         $ mas_unlockFailedWRS('mj_wrs_foreverandevermod')
     return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_windowreacts_database,
+            eventlabel="mj_wrs_stimuwrite",
+            category=['Stimuwrite|Stimu Write'],
+            rules={
+                "notif-group": "Window Reactions",
+                "skip alert": None,
+                "keep_idle_exp": None,
+                "skip_pause": None
+            },
+            show_in_idle=True
+        ),
+        code="WRS"
+    )
+
+label mj_wrs_stimuwrite:
+    $ wrs_success = mas_display_notif(
+        m_name,
+        [
+            "Writing a story?",
+            "Taking notes, [player]?",
+            "Writing a poem?",
+            "Writing a love letter?~",
+            "Oh my! I wish I had this when I was in class still!",
+            "Go [player]!",
+            "Go [player]! You can make it to that wordcount!"
+        ],
+        'Window Reactions'
+    )
+
+    #Unlock again if we failed
+    if not wrs_success:
+        $ mas_unlockFailedWRS('mj_wrs_stimuwrite')
+    return

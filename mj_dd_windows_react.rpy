@@ -145,3 +145,69 @@ label mj_wrs_stimuwrite:
     if not wrs_success:
         $ mas_unlockFailedWRS('mj_wrs_stimuwrite')
     return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_windowreacts_database,
+            eventlabel="mj_wrs_whatsapp",
+            category=['Whatsapp],
+            rules={
+                "notif-group": "Window Reactions",
+                "skip alert": None,
+                "keep_idle_exp": None,
+                "skip_pause": None
+            },
+            show_in_idle=True
+        ),
+        code="WRS"
+    )
+
+label mj_wrs_whatsapp:
+    $ wrs_success = mas_display_notif(
+        m_name,
+        [
+            "Say hi for me [player]!",
+            "Oh, private conversation! I'll try not to snoop..."
+        ],
+        'Window Reactions'
+    )
+
+    #Unlock again if we failed
+    if not wrs_success:
+        $ mas_unlockFailedWRS('mj_wrs_whatsapp')
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_windowreacts_database,
+            eventlabel="mj_wrs_painttoolsai1and2",
+            category=['PaintTool Sai| Paint Tool Sai|Sai|sai2S|PaintTool Sai Ver.2|Sai2|sai2S],
+            rules={
+                "notif-group": "Window Reactions",
+                "skip alert": None,
+                "keep_idle_exp": None,
+                "skip_pause": None
+            },
+            show_in_idle=True
+        ),
+        code="WRS"
+    )
+
+label mj_wrs_painttoolsai1and2:
+    $ wrs_success = mas_display_notif(
+        m_name,
+        [
+            "What are you drawing [player]?",
+            "Making fanart for me~? Ehehe, just teasing!",
+            "I wish I knew how to use your art programs from here..."
+            "Saving an image [player]?"
+        ],
+        'Window Reactions'
+    )
+
+    #Unlock again if we failed
+    if not wrs_success:
+        $ mas_unlockFailedWRS('mj_wrs_painttoolsai1and2')
+    return

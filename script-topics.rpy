@@ -20,6 +20,7 @@ label mj_dd_ecosiapleasesponserus:
     m 4wub "It donates the money you generate from your searches to the Ecosia organisation, which fully utilises it for tree planting."
     m 6sub "It also has browser extensions, so you can intergrate it more seamlessly into your browsing uses!"
     m 4hua "You can learn about it more here!" #insert link to ecosia site
+    m 4hua "https://www.ecosia.org/"
     m 6fua "..."
     m 2husdlb "I'm not sponsored by Ecosia, by the way-{w=0.3}{nw}"
     extend "Ehehe..." #(Face like: 😅)

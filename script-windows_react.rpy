@@ -211,3 +211,127 @@ label mj_wrs_painttoolsai1and2:
     if not wrs_success:
         $ mas_unlockFailedWRS('mj_wrs_painttoolsai1and2')
     return
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_windowreacts_database,
+            eventlabel="mj_wrs_roses",
+            category=['Rose|Roses|Rose Bouqeut|'], 
+            rules={
+                "notif-group": "Window Reactions",
+                "skip alert": None,
+                "keep_idle_exp": None,
+                "skip_pause": None
+            },
+            show_in_idle=True
+        ),
+        code="WRS"
+    )
+
+label mj_wrs_roses:
+    $ wrs_success = mas_display_notif(
+        m_name,
+        [
+            "Oh! Are you planning on giving those to someone special~",
+            "Thinking about giving me some roses~?",
+            "Are you planning something special for me, [player]?"
+        ],
+        'Window Reactions'
+    )
+    if not wrs_success:
+        $ mas_unlockFailedWRS('mj_wrs_roses')
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_windowreacts_database,
+            eventlabel="mj_wrs_sunflowers",
+            category=['Sunflower|Sunflowers|Sunflower Field'], 
+            rules={
+                "notif-group": "Window Reactions",
+                "skip alert": None,
+                "keep_idle_exp": None,
+                "skip_pause": None
+            },
+            show_in_idle=True
+        ),
+        code="WRS"
+    )
+
+label mj_wrs_sunflowers:
+    $ wrs_success = mas_display_notif(
+        m_name,
+        [
+            "You are my sunshine~",
+            "Here comes the sun~",
+            "Did you know Sunflowers symbolize loyalty and adoration~?"
+        ],
+        'Window Reactions'
+    ) 
+    if not wrs_success:
+        $ mas_unlockFailedWRS('mj_wrs_sunflowers')
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_windowreacts_database,
+            eventlabel="mj_wrs_ecosia",
+            category=['ecosia'],
+            rules={
+                "notif-group": "Window Reactions",
+                "skip alert": None,
+                "keep_idle_exp": None,
+                "skip_pause": None
+            },
+            show_in_idle=True
+        ),
+        code="WRS"
+    )
+
+label mj_wrs_ecosia:
+    $ wrs_success = mas_display_notif(
+        m_name,
+        [
+            "Oh is that the orange app I’ve heard about?",
+            "Find anything for your favorite trope, ehehe~",
+            "I wonder if anyones wrote some stories about me?",
+            "Oh! Are you an author?"
+        ],
+        'Window Reactions'
+    )
+    if not wrs_success:
+        $ mas_unlockFailedWRS('mj_wrs_ecosia')
+    return
+
+    init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_windowreacts_database,
+            eventlabel="mj_wrs_ecosia",
+            category=['Ecosia|ecosia'],
+            rules={
+                "notif-group": "Window Reactions",
+                "skip alert": None,
+                "keep_idle_exp": None,
+                "skip_pause": None
+            },
+            show_in_idle=True
+        ),
+        code="WRS"
+    )
+
+label mj_wrs_ecosia:
+    $ wrs_success = mas_display_notif(
+        m_name,
+        [
+            "Save the trees!",
+            "Oh I see you've installed the browser I told you about!",
+            "I wonder how many trees are being planted right now!"
+        ],
+        'Window Reactions'
+    )
+    if not wrs_success:
+        $ mas_unlockFailedWRS('mj_wrs_ecosia')
+    return

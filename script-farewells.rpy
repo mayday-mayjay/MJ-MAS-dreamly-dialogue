@@ -1,24 +1,60 @@
-"My PC is burning."
+init 5 python:
+    addEvent(
+        Event(
+            persistent.farewell_database,
+            eventlabel="bye_mj_thundering",
+            prompt="It´s thundering.",
+            unlocked=True,
+            pool=True
+        ),
+        code="BYE"
+    )
 
-m 1wud "Oh!"
-m 3ekb "Understood, [player]!"
-m 2eksdlc "Please, take care of your computer."
-m 2hua "See you later~."
+label bye_mj_thundering:
+    m 1ekc "Oh..."
+    m 1eka "Thanks for letting me know, [player]!"
+    m 2ekc "Please, be safe..."
+    m 2ekc "...and if you happen to need to get out of your home, try to avoid lighting as much as you can."
+    m 3eka "I love you so much. Come back safe to me!"
+return
 
-"My PC is dying."
+init 5 python:
+    addEvent(
+        Event(
+            persistent.farewell_database,
+            eventlabel="bye_mj_pc_dying",
+            prompt="My PC is dying.",
+            unlocked=True,
+            pool=True
+        ),
+        code="BYE"
+    )
 
-m 1dsc "Thats worrying to hear, [player]."
-m 1eka "Thank you for letting me know, though!"
-m 1ekbla "Make sure to come back to me as soon as you can!"
-m 1hub "I love you!"
+label bye_mj_pc_dying:
+    m 1dsc "Thats worrying to hear, [player]."
+    m 1eka "Thank you for letting me know, though!"
+    m 1ekbla "Make sure to come back to me as soon as you can!"
+    m 1hub "I love you!"
+return
 
-"It´s thundering."
+init 5 python:
+    addEvent(
+        Event(
+            persistent.farewell_database,
+            eventlabel="bye_mj_pc_burning",
+            prompt="My PC is burning up.",
+            unlocked=True,
+            pool=True
+        ),
+        code="BYE"
+    )
 
-m 1ekc "Oh..."
-m 1eka "Thanks for letting me know, [player]!"
-m 2ekc "Please, be safe..."
-m 2ekc "...and if you happen to need to get out of your home, try to avoid lighting as much as you can."
-m 3eka "I love you so much. Come back safe to me!"
+label bye_mj_pc_burning:
+    m 1wud "Oh!"
+    m 3ekb "Understood, [player]!"
+    m 2eksdlc "Please, take care of your computer."
+    m 2hua "See you later~."
+return 
 
 "I´m going to charge my laptop."
 

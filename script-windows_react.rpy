@@ -277,8 +277,8 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_windowreacts_database,
-            eventlabel="mj_wrs_ecosia",
-            category=['ecosia'],
+            eventlabel="mj_wrs_wattpad",
+            category=['Wattpad/wattpad'],
             rules={
                 "notif-group": "Window Reactions",
                 "skip alert": None,
@@ -290,7 +290,7 @@ init 5 python:
         code="WRS"
     )
 
-label mj_wrs_ecosia:
+label mj_wrs_wattpad:
     $ wrs_success = mas_display_notif(
         m_name,
         [
@@ -302,7 +302,7 @@ label mj_wrs_ecosia:
         'Window Reactions'
     )
     if not wrs_success:
-        $ mas_unlockFailedWRS('mj_wrs_ecosia')
+        $ mas_unlockFailedWRS('mj_wrs_wattpad')
     return
 
     init 5 python:

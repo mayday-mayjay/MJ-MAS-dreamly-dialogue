@@ -335,3 +335,69 @@ label mj_wrs_ecosia:
     if not wrs_success:
         $ mas_unlockFailedWRS('mj_wrs_ecosia')
     return
+    
+    init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_windowreacts_database,
+            eventlabel="mj_wrs_ao3",
+            category=['archiveofourown.org|ao3|Archive of Our Own'],
+            rules={
+                "notif-group": "Window Reactions",
+                "skip alert": None,
+                "keep_idle_exp": None,
+                "skip_pause": None
+            },
+            show_in_idle=True
+        ),
+        code="WRS"
+    )
+
+label mj_wrs_ao3:
+    $ wrs_success = mas_display_notif(
+        m_name,
+        [
+            "Find anything intersting to read?",
+            "Find anything for your favorite trope, ehehe~",
+            "I wonder if anyones wrote some stories about me?",
+            "Oh! Are you an author?"
+            "The tag systen sure is helpful, isn't it [player]!"
+        ],
+        'Window Reactions'
+    )
+    if not wrs_success:
+        $ mas_unlockFailedWRS('mj_wrs_a03')
+    return
+
+init 5 python:
+    addEvent(
+        Event(
+            persistent._mas_windowreacts_database,
+            eventlabel="mj_wrs_photoshop",
+            category=['Adobe|Adobe Photoshop|Photoshop'],
+            rules={
+                "notif-group": "Window Reactions",
+                "skip alert": None,
+                "keep_idle_exp": None,
+                "skip_pause": None
+            },
+            show_in_idle=True
+        ),
+        code="WRS"
+    )
+
+label mj_wrs_photoshop:
+    $ wrs_success = mas_display_notif(
+        m_name,
+        [
+            "Are you editing something, [player]?",
+            "Paint me like one of your french girls, ahaha~",
+            "It's looking great!",
+            "How talented!"
+            "What are you drawing, [player]?"
+        ],
+        'Window Reactions'
+    )
+    if not wrs_success:
+        $ mas_unlockFailedWRS('mj_wrs_photoshop')
+    return

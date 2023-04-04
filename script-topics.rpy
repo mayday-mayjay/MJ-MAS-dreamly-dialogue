@@ -747,3 +747,14 @@ m "Oh...well whatever I did just know that I'm really sorry."
 m "I never intend to ever hurt you in any form."
 m "I promise I'll try to be more careful so as to not offend you in any way."
 m "I love you so much and it hurts me to see you in any type of pain."
+
+
+#Fourtune time
+“[player]! I have a surprise for you!”
+“I’m going to read your fortune!”
+“Ahaha! I know it might seem random but, I just made this paper fortune teller and I want to test it out!”
+“Okay, here we go!”
+“…”
+“Aha! It says, You are going to receive a cute surprise!”
+—kiss time—
+“Looks like your fortune came true, ahaha~”

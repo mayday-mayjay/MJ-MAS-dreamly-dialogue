@@ -750,11 +750,25 @@ m "I love you so much and it hurts me to see you in any type of pain."
 
 
 #Fourtune time
-“[player]! I have a surprise for you!”
-“I’m going to read your fortune!”
-“Ahaha! I know it might seem random but, I just made this paper fortune teller and I want to test it out!”
-“Okay, here we go!”
-“…”
-“Aha! It says, You are going to receive a cute surprise!”
-—kiss time—
-“Looks like your fortune came true, ahaha~”
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mj_dd_fourtune_time", 
+            category=["example", "topic"], # list of categories this topic belongs in (These are automatically capitalized)
+            prompt="Fourtune", # button text
+            aff_range=(mas_aff.ENAMORED, None),
+            random=True
+        )
+    )
+
+label mj_dd_fourtune_time:
+    “[player]! I have a surprise for you!”
+    “I’m going to read your fortune!”
+    “Ahaha! I know it might seem random but, I just made this paper fortune teller and I want to test it out!”
+    “Okay, here we go!”
+    “…”
+    “Aha! It says, You are going to receive a cute surprise!”
+    call monika_kissing_motion_short
+    “Looks like your fortune came true, ahaha~"
+return 

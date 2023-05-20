@@ -3,7 +3,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_songs_database,
-            eventlabel="mj_song_classic",
+            eventlabel="mj_dd_song_classic",
             prompt="Classic",
             category=[mas_songs.TYPE_SHORT],
             aff_range=(mas_aff.ENAMORED, None),
@@ -12,7 +12,7 @@ init 5 python:
         code="SNG"
     )
 
-label mj_song_classic:
+label mj_dd_song_classic:
     m 1dubfa "{i}~You’re over my head~{/i}"
     m 1dubfb "{i}~Outta my mind~{/i}"
     m 1dubfa "{i}~Thinking I was born in the wrong time~{/i}"
@@ -32,7 +32,7 @@ init 5 python:
     addEvent(
         Event(
             persistent._mas_songs_database,
-            eventlabel="mj_song_every_time_we_touch",
+            eventlabel="mj_dd_song_every_time_we_touch",
             prompt="Everytime We Touch",
             category=[mas_songs.TYPE_LONG],
             aff_range=(mas_aff.ENAMORED, None),
@@ -41,7 +41,7 @@ init 5 python:
         code="SNG"
     )
 
-label mj_song_every_time_we_touch:
+label mj_dd_song_every_time_we_touch:
     m "{i}I still hear your voice when you sleep next to me.{/i}"
     m "{i}I still feel your touch in my dreams.{/i}"
     m "{i}Forgive me my weakness..{/i}"

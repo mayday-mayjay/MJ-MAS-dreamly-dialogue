@@ -2,7 +2,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.farewell_database,
-            eventlabel="bye_mj_thundering",
+            eventlabel="bye_mj_dd_thundering",
             prompt="It´s thundering.",
             unlocked=True,
             pool=True
@@ -10,7 +10,7 @@ init 5 python:
         code="BYE"
     )
 
-label bye_mj_thundering:
+label bye_mj_dd_thundering:
     m 1ekc "Oh..."
     m 1eka "Thanks for letting me know, [player]!"
     m 2ekc "Please, be safe..."
@@ -30,7 +30,7 @@ init 5 python:
         code="BYE"
     )
 
-label bye_mj_pc_dying:
+label bye_mj_dd_pc_dying:
     m 1dsc "Thats worrying to hear, [player]."
     m 1eka "Thank you for letting me know, though!"
     m 1ekbla "Make sure to come back to me as soon as you can!"
@@ -41,7 +41,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.farewell_database,
-            eventlabel="bye_mj_pc_burning",
+            eventlabel="bye_mj_dd_pc_burning",
             prompt="My PC is burning up.",
             unlocked=True,
             pool=True
@@ -49,7 +49,7 @@ init 5 python:
         code="BYE"
     )
 
-label bye_mj_pc_burning:
+label bye_mj_dd_pc_burning:
     m 1wud "Oh!"
     m 3ekb "Understood, [player]!"
     m 2eksdlc "Please, take care of your computer."
@@ -60,7 +60,7 @@ nit 5 python:
     addEvent(
         Event(
             persistent.farewell_database,
-            eventlabel="bye_mj_pc_charging",
+            eventlabel="bye_mj_dd_pc_charging",
             prompt="I'm going to charge my laptop",
             unlocked=True,
             pool=True
@@ -68,7 +68,7 @@ nit 5 python:
         code="BYE"
     )
 
-label bye_mj_pc_charging:
+label bye_mj_dd_pc_charging:
     m "Understood, [mas_get_player_nickname()]!"
     m "But, hey, can´ t you leave me running while it charges?"
     m "Its okey if you can´t though."
@@ -87,55 +87,23 @@ menu:
     
 return "quit"
 
-"I´m going to the cinema.":
 
-m 1hub "Oh! That's great to hear!"
-m 2rub "I wonder what movie are you going to watch..."
-m 2eub "Nevertheless, I won´t distract you anymore, [mas_get_player_nickname()]."
-m 1huu "See you!"
+init 5 python:
+    addEvent(
+        Event(
+            persistent.farewell_database,
+            eventlabel="bye_mj_dd_cinema",
+            prompt="I'm going to the cinema.",
+            unlocked=True,
+            pool=True
+        ),
+        code="BYE"
+    )
 
-#(if 3-10 hours have passed)
+label bye_mj_dd_cinema:
+    m 1hub "Oh! That's great to hear!"
+    m 2rub "I wonder what movie are you going to watch..."
+    m 2eub "Nevertheless, I won´t distract you anymore, [mas_get_player_nickname()]."
 
-m 1eub "Welcome back, [player]!"
-m 1hub "I hope you had a wonderful time at the cinema!"
-m 3wud "What kind of movie was it, by the way?"
-
-"An horror movie.":
-
-m 2wud "Ooh!"
-#(If Monika has spoken about horror movies before): 
-m 2rua "I remember how we discussed the hardship of creating an horror movie nowadays."
-
-(If not): Elaborating an actual scary movie takes a lot nowadays.
-It´s necessary that it isn´t plagated of cheap jumpscares and stereotypical tropes. 
-
-Anyway! As sacry as that movie could be, there is nothing to fear now.
-You´re here, you´re safe. I will take care of you, okey? (if high aff maybe putting a "<3" as well)
-
->Comedy/Romance
-Going for something lighter, player?
-Ahaha!
-You need to be careful while writing comedy or romance, though.
-It is so easy to fall into the cinematic rabbit hole of cliches.
-Buuut... at the same time...
-I dream with a day where we can both go to the cinema together~
-And maybe... watch a romantic movie by your side...
-Wouldnt that be greatful, player?
-But then again, this reality is our personal movie for now. I love you!
-
-return "love"
-
-
-thriller/mystery
-Interesting choice, indeed!
-You see, mystery can be one of my go-to choices in terms of picking movies.
-If well done, they can grasp your attention since the very beggining...
-...and the mysteries can be so well fabricated they may sumerge you into the plot all the way!
-I hope watching that movie was a great experience. Now we can hang out for a little bit. Hehehe~
-a cartoon movie/anime
-
-A cartoon movie! That´s sweet!
-You know, I would not mind at all if you wanted to take me to watch some animated media when I cross over.
-I might not be accustomed to it, but, if it´s for you, I will definetly give it a try!
-Come to think of it, maybe Natsuki would be the type to enjoy that kind of stuff, wouldn´t she?
-Anyway! Ready to spend some more time together, player~?
+    $ persistent._mas_greeting_type = store.mas_greetings.TYPE_MJ_DD_CINEMA
+    return "quit"

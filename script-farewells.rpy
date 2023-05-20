@@ -22,7 +22,7 @@ init 5 python:
     addEvent(
         Event(
             persistent.farewell_database,
-            eventlabel="bye_mj_pc_dying",
+            eventlabel="bye_mj_dd_pc_dying",
             prompt="My PC is dying.",
             unlocked=True,
             pool=True

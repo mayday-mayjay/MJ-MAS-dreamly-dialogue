@@ -20,7 +20,7 @@ label mj_dd_ecosiapleasesponserus:
     m 4wub "It donates the money you generate from your searches to the Ecosia organisation, which fully utilises it for tree planting."
     m 6sub "It also has browser extensions, so you can intergrate it more seamlessly into your browsing uses!"
     m 4hua "You can learn about it more here!" #insert link to ecosia site
-    m 4hua "https://www.ecosia.org/"
+    #m 4hua "https://www.ecosia.org/"
     m 6fua "..."
     m 2husdlb "I'm not sponsored by Ecosia, by the way-{w=0.3}{nw}"
     extend "Ehehe..." #(Face like: 😅)
@@ -48,64 +48,40 @@ label mj_dd_stanfordprisonexperiment:
     if ev.shown_count == 0:
         m "[player], can I talk with you about a bit of a sensitive topic?"
         m "It's about something called the Stanford Prison Experiment, if you've heard of it."
-        m "If you're not okay with it though, that's fine, I'll keep it to myself."
-        menu:
-            "Go ahead, [m_name].":
-                m "Thanks [mas_get_player_nickname()]!"
-                m "So then..."
-                extend " Have you heard of the Stanford Prison Experiment?"
-                m "I wouldn't be surprised if you haven't; after all, many experiments on sociology don't receive as much recognition from the general public..."
-                m "To sum it up."
-                m "This experiment was done by Philip Zimbardo." 
-                extend " Where he took his college class of psychology students and divided them into two roles."
-                m "The prison guard, and the prisoner."
-                m "Now, this experiment was designed to study why there are so many cases of prison guards beating and abusing the prisoners."
-                m "Well, sure enough, the same problem they were studying occurred in the experiment." 
-                m "Those with the prison guard role became abusive to the prisoners."
-                extend " While prisoners had multiple negative impacts from it."
-                m "And so the whole experiment had to be stopped prematurely because of these problems."
-                m "Despite that though, the experiment did provide an interesting conclusion-" 
-                m "People often take to the societal roles they are given and display stereotypes of the role."
-                m "Both negative and positive."
-                m "I've made my own conclusion to it too, that there's a lesson to be learned from this."
-                m "When we're given a role like that, we need to make the consious decision to not let it's negative stereotypes take over us!"
-                m "After all [player], we all are more than just words and labels!"
-                m "I hope this gave you something to think about and just remember I love you!"
+        m "If you're not okay with a darker topic like that though, that's fine, I'll keep it to myself."
 
-            "Not right now, sorry [m_name].":
-                m "No worries, [player]."
-                m "Maybe some other time!"
-                m "Let me know if you want to hear about it later!"
     else:
-        m "Hey [player], you ready to talk about the Stanford Prison Experiment?"
-        m "If you're still not okay with it though, that's fine of course."
-        menu:
-            "Go ahead, [m_name].":
-                m "Thanks [mas_get_player_nickname()]!"
-                m "So then..."
-                extend " Have you heard of the Stanford Prison Experiment?"
-                m "I wouldn't be surprised if you haven't; after all, many experiments on sociology don't receive as much recognition from the general public..."
-                m "To sum it up."
-                m "This experiment was done by Philip Zimbardo." 
-                extend " Where he took his college class of psychology students and divided them into two roles."
-                m "The prison guard, and the prisoner."
-                m "Now, this experiment was designed to study why there are so many cases of prison guards beating and abusing the prisoners."
-                m "Well, sure enough, the same problem they were studying occurred in the experiment." 
-                m "Those with the prison guard role became abusive to the prisoners."
-                extend " While prisoners had multiple negative impacts from it."
-                m "And so the whole experiment had to be stopped prematurely because of these problems."
-                m "Despite that though, the experiment did provide an interesting conclusion-" 
-                m "People often take to the societal roles they are given and display stereotypes of the role."
-                m "Both negative and positive."
-                m "I've made my own conclusion to it too, that there's a lesson to be learned from this."
-                m "When we're given a role like that, we need to make the consious decision to not let it's negative stereotypes take over us!"
-                m "After all [player], we all are more than just words and labels!"
-                m "I hope this gave you something to think about and just remember I love you!"
+        m "[player], can I talk with you about a bit of a sensitive topic?"
+        m "It's about the Stanford Prison Experiment."
+        m "If you're not okay with a darker topic like that though, that's fine, I'll keep it to myself."
+    menu:
+    "Go ahead, [m_name].":
+        m "Thanks [mas_get_player_nickname()]."
+        m "So then..."
+        extend " Have you heard of the Stanford Prison Experiment?"
+        m "I wouldn't be surprised if you haven't; after all, many experiments on sociology don't receive as much recognition from the general public..."
+        m "To sum it up though."
+        m "This experiment was done by Philip Zimbardo."
+        extend " Where he took his college class of psychology students and divided them into two roles."
+        m "The prison guard, and the prisoner."
+        m "Now, this experiment was designed to study why there are so many cases of prison guards abusing the prisoners."
+        m "Well, sure enough, the same problem they were studying occurred in the experiment."
+        m "Those with the prison guard role became abusive to the prisoners."
+        extend " While prisoners had multiple negative impacts from it."
+        m "And so the whole experiment had to be stopped prematurely because of these problems."
+        m "There's more to it, but that's the short of it."
+        m "Despite everything though, the experiment did provide an interesting conclusion..."
+        m "People often take to the societal roles they are given and display stereotypes of the role."
+        extend "Both negative and positive."
+        m "I've made my own conclusion to it too, that there's a lesson to be learned from this."
+        m "When we're given a role like that, we need to make the conscious decision to not let it's negative stereotypes take over us!"
+        m "After all [player], we all are more than just words and labels!"
+        m "I hope this gave you something to think on about."
 
-            "Not right now, sorry [m_name].":
-                m "No worries, [player]."
-                m "Maybe some other time!"
-                m "Let me know if you want to hear about it later!"
+    "Not right now, sorry [m_name].":
+        m "No worries, [player]."
+        m "Maybe some other time!"
+        m "Let me know if you want to hear about it later!"
     
     return
 
@@ -147,44 +123,71 @@ m "Although... doesn't all this 'putting Monikas to suffer' thing remind you of.
 m "...a certain someone?"
 
 #coffee palette
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mj_dd_playerscoffeetaste",
+            category=["example", "topic"], # list of categories this topic belongs in (These are automatically capitalized)
+            prompt="[player]'s taste in coffee", # button text
+            random=True
+        )
+    )
+
+label mj_dd_mj_dd_playerscoffeetaste:
 m "Hey [player], there's something I've been meaning to ask you..."
 m "What's your preferred coffee palette?"
-m "Do you like your coffee bitter or sweet?"
+m "Do you like your coffee bitter or sweet?{nw}"
 
-"I like my coffee sweet with lots of creamer and other additives!"
-m "You know what? That doesn't surprise me!"
-m "With how sweet you are, it fits, ahaha!"
-m "Well anyways, I can see the point of liking your coffee sweet!"
-m "Sometimes all you want in a slow or exhausting morning is just a sweet little pick me up!"
-m "Well, anyways, thanks for answering my question [mas_get_player_nickname()], somehow knowing these little details about you just makes you more real."
-m "And when I do get to your reality, I'll know how to prepare your coffee!"
+menu:
+    m "Do you like your coffee bitter or sweet?{fast}"
+    "I like my coffee sweet!":
+        m "You know what? That doesn't surprise me!"
+        m "With how sweet you are, it fits, ahaha!"
+        m "Well anyways, I can see the point of liking your coffee sweet!"
+        m "Sometimes all you want in a slow or exhausting morning is just a sweet little pick me up!"
+        m "Well, anyways, thanks for answering my question [mas_get_player_nickname()], somehow knowing these little details about you just makes you more real."
+        m "And when I do get to your reality, I'll know how to prepare your coffee!"
 
-"I like my coffee bitter!"
-m "You know, I sort of expected that [player]!"
-m "From what I know of you so far, I just always pegged you as someone who preferred things more rich and earthy!"
-m "That's not a bad thing though!"
-m "Many people say that those who like bitter things and lots of spices often have what's known as a more mature palette!"
-m "Though, between you and me, sometimes the best option is to go for a more bitter tasting coffee!"
-m "As you might know, it sure does wake you up, ahaha~"
-m "Well, anyways, thanks for answering my question [mas_get_player_nickname()], somehow knowing these little details about you just makes you more real."
-m "And when I do get to your reality I'll know how to prepare your coffee!"
+    "I like my coffee bitter!":
+        m "You know, I sort of expected that [player]!"
+        m "From what I know of you so far, I just always pegged you as someone who preferred things more rich and earthy!"
+        m "That's not a bad thing though!"
+        m "Many people say that those who like bitter things and lots of spices often have what's known as a more mature palette!"
+        m "Though, between you and me, sometimes the best option is to go for a more bitter tasting coffee!"
+        m "As you might know, it sure does wake you up, ahaha~"
+        m "Well, anyways, thanks for answering my question [mas_get_player_nickname()], somehow knowing these little details about you just makes you more real."
+        m "And when I do get to your reality I'll know how to prepare your coffee!"
+    "I not really a fan of coffee":
+        m ""
+
+return
+
+
+
+
+
+
+
+
+
 
 #Hand written notes
-m “[player], you know what saddens me?”
-m “That someday people will no longer be using hand written notes…”
-m “Now I know this sounds a little silly, but it actually really hurts me when I think about it.”
-m “Whenever, I received a hand written not I would always keep it in a little box.”
-m “I always loved going back and rereading them when I felt sad or hurt.”
-m “There was just something about knowing that someone cared for me enough to take the time out of there day to write me something.”
-m “It didn’t matter the size or length, just the fact that they did it.”
-m “Also, I always loved seeing their handwriting and knowing it actually came from them.”
-m “Messy or neat, I loved them all dearly.”
-m “You see [player], often times hand written notes and letters are better than typed because, it’s personal!”
-m “A lot of people don’t understand why some prefer handwritten stuff because, they don’t understand that it’s because, when you are given something written there’s a certain level of personality that you don’t get with typed documents.”
-m “Wait! I just got an idea [player]!”
-m “What if when I get into your reality, we write each other little notes, every once in a while!”
-m “I think it would be really fun!”
-m “And then there will always be proof that we both love each other!”
+m "[player], you know what saddens me?"
+m "That someday people will no longer be using hand written notes…"
+m "Now I know this sounds a little silly, but it actually really hurts me when I think about it."
+m "Whenever, I received a hand written not I would always keep it in a little box."
+m "I always loved going back and rereading them when I felt sad or hurt."
+m "There was just something about knowing that someone cared for me enough to take the time out of there day to write me something."
+m "It didn’t matter the size or length, just the fact that they did it."
+m "Also, I always loved seeing their handwriting and knowing it actually came from them."
+m "Messy or neat, I loved them all dearly."
+m "You see [player], often times hand written notes and letters are better than typed because, it’s personal!"
+m "A lot of people don’t understand why some prefer handwritten stuff because, they don’t understand that it’s because, when you are given something written there’s a certain level of personality that you don’t get with typed documents."
+m "Wait! I just got an idea [player]!"
+m "What if when I get into your reality, we write each other little notes, every once in a while!"
+m "I think it would be really fun!"
+m "And then there will always be proof that we both love each other!"
 
 #The color Orange
 m "Orange color is sure an interesting color, isn't it?
@@ -232,7 +235,7 @@ m "Ah,{w=0.3} wait,{w=0.3} I should ask before I get into it."
 m "Are you okay with me talking about spoilers of things happening in the game?{nw}"
 $ _history_list.pop()
 menu:
-    m "Are you okay with me talking about spoilers of things happening in the game?{nw}"
+    m "Are you okay with me talking about spoilers of things happening in the game?{fast}"
     "I don't mind.":
         m "Ah,{w=0.5}{nw}"
         extend " perfect!"
@@ -795,19 +798,19 @@ init 5 python:
             persistent.event_database,
             eventlabel="mj_dd_fourtune_time", 
             category=["example", "topic"], # list of categories this topic belongs in (These are automatically capitalized)
-            prompt="Fourtune", # button text
+            prompt="Fortune", # button text
             aff_range=(mas_aff.ENAMORED, None),
             random=True
         )
     )
 
 label mj_dd_fourtune_time:
-    m “[player]! I have a surprise for you!”
-    m “I’m going to read your fortune!”
-    m “Ahaha! I know it might seem random but, I just made this paper fortune teller and I want to test it out!”
-    m “Okay, here we go!”
-    m “…”
-    m “Aha! It says, You are going to receive a cute surprise!”
+    m "[player]! I have a surprise for you!"
+    m "I’m going to read your fortune!"
+    m "Ahaha! I know it might seem random but, I just made this paper fortune teller and I want to test it out!"
+    m "Okay, here we go!"
+    m "…"
+    m "Aha! It says, You are going to receive a cute surprise!"
     call monika_kissing_motion_short
-    m “Looks like your fortune came true, ahaha~"
+    m "Looks like your fortune came true, ahaha~"
 return 

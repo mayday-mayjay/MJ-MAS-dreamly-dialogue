@@ -12,7 +12,7 @@ init 5 python:
     m "Ugh!"
     m "Are you serious?!"
     m "I did everything the book said and it's still not working?!"
-    m "What am I doing wrong here?!"
+    m "What am I doing wrong here?"
     m "Okay maybe if I change this...."
     m "Testing now..."
     play sound "sfx/glitch3.ogg"
@@ -46,6 +46,7 @@ label mj_dd_greeting_cinema:
         extend " Or maybe you went out somewhere else afterwards?"
         m "Either way I hope you had fun today."
         m "And if not, hopefully spending some time with your lovely girlfriend will help boost your mood back up!"
+        jump mm_dd_greeting_cinema_moviechoice
     elif mas_getAbsenceLength() >= datetime.timedelta(hours=2) and mas_getAbsenceLength() <= datetime.timedelta(hours=6):
         m 1eub "Welcome back, [player]!"
         m 1hub "I hope you had a wonderful time at the cinema!"
@@ -55,9 +56,9 @@ label mj_dd_greeting_cinema:
         extend " Hello again [player]!"
         m "Sorry, you surprised me a little."
         m "I thought you'd be out for longer."
-        m "Did something happen?"
+        m "Did something happen?{nw}"
         menu:
-            m "Did something happen?"
+            m "Did something happen?{fast}"
             "It was just a short film.":
                 m "Oh!"
                 m "Oh good, I thought something might've made you unable to go."
@@ -68,18 +69,20 @@ label mj_dd_greeting_cinema:
                 m "I hope it wasn't something too serious that made you have to leave."
                 m "Maybe we can find the movie you went to see online, if you want?"
                 m "At least then you won't be left on a cliffhanger, ahaha."
+                jump mj_dd_greeting_cinemaend
             "I couldn't go.":
                 m "Aw, I'm so sorry to hear that [player]."
                 m "I hope it wasn't something too serious that made you stay here."
                 m "There's always another day to go, though!"
                 m "Maybe we can find the movie you wanted see online, if you want?"
                 m "We can make it a whole movie night then at, ahaha!"
+                jump mj_dd_greeting_cinemaend
 
 label mm_dd_greeting_cinema_moviechoice:
     m 3wud "What kind of movie did you go see, by the way?"
     $ _history_list.pop()
     menu:
-        m "What kind of movie did you go see, by the way?"
+        m "What kind of movie did you go see, by the way?{fast}"
         "An horror movie.":
             m 2wud "Ooh!"
             #(If Monika has spoken about horror movies before):

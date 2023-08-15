@@ -1,4 +1,16 @@
 #Hand written notes
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mj_dd_handwriting",
+            category=["example", "topic"], # list of categories this topic belongs in (These are automatically capitalized)
+            prompt="Hand Written Notes", # button text
+            random=True
+        )
+    )
+
+label mj_dd_handwriting:
 m "[player], you know what saddens me?"
 m "That someday people will no longer be using hand written notes…"
 m "Now I know this sounds a little silly, but it actually really hurts me when I think about it."

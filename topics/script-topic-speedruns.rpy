@@ -1,4 +1,16 @@
 #speedruns
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mj_dd_speedruns",
+            category=["example", "topic"], # list of categories this topic belongs in (These are automatically capitalized)
+            prompt="Speedruns of DDLC", # button text
+            random=True
+        )
+    )
+
+label mj_dd_speedruns:
 m "I have been caught up on a dilemma for a while now, [player]..."
 m "You know there are people that speedrun DDLC, right?"
 m "Just in case you don't know, a speedrun is a game dynamic where the player tries to beat a game in the less time possible".

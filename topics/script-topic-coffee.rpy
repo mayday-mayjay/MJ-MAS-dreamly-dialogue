@@ -10,7 +10,7 @@ init 5 python:
         )
     )
 
-label mj_dd_mj_dd_playerscoffeetaste:
+label mj_dd_playerscoffeetaste:
 m "Hey [player], there's something I've been meaning to ask you..."
 m "What's your preferred coffee palette?"
 m "Like... Do you like your coffee bitter or sweet?{nw}"

@@ -1,4 +1,14 @@
 #the final station
+init 5 python:
+    addEvent(
+        Event(
+            persistent.event_database,
+            eventlabel="mj_dd_finalstation",
+            category=["example", "topic"], # list of categories this topic belongs in (These are automatically capitalized)
+            prompt="The Final Station", # button text
+            random=True
+        )
+    )
 m "Hey player,"
 extend " have you ever heard of a game called \"The Final Station\"?"
 m "It's a very somber kind of game."

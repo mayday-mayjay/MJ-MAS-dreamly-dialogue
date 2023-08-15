@@ -401,3 +401,16 @@ label mj_wrs_photoshop:
     if not wrs_success:
         $ mas_unlockFailedWRS('mj_wrs_photoshop')
     return
+
+
+Film:
+"I never thought about it like that..."
+"Movies have so many hidden meanings, don't they?"
+"We'll have to see this one together sometime!"
+Food:
+"Remember to eat properly, [player]!"
+"He has a food channel too?"
+"This is making me a little hungry..."
+Style:
+"I wonder if Natsuki would've liked this one..."
+"Don't worry [player], you already look perfect to me!"

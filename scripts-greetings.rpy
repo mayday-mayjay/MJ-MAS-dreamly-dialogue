@@ -79,16 +79,16 @@ label mj_dd_greeting_cinema:
                 jump mj_dd_greeting_cinemaend
 
 label mm_dd_greeting_cinema_moviechoice:
-    m 3wud "What kind of movie did you go see, by the way?"
+    $ ev = mas_getEV("monika_horror")
+    m 3wud "What kind of movie did you go see, by the way?{nw}"
     $ _history_list.pop()
     menu:
         m "What kind of movie did you go see, by the way?{fast}"
         "An horror movie.":
             m 2wud "Ooh!"
-            #(If Monika has spoken about horror movies before):
-            m 2rua "I remember how we discussed the hardship of creating an horror movie nowadays."
+            if ev.shown_count == 0:
+                m 2rua "I remember how we discussed the hardship of creating an horror movie nowadays."
 
-            (If not):
             m "Elaborating an actual scary movie takes a lot nowadays."
             m "It´s necessary that it isn´t plagiated of cheap jumpscares and stereotypical tropes."
             m "Anyway! As scary as that movie could be, there is nothing to fear now."
@@ -105,16 +105,14 @@ label mm_dd_greeting_cinema_moviechoice:
             m "Wouldn't that be perfect, player?"
             m "But then again, this reality is our personal movie for now. I love you!"
 
-
-
         "thriller/mystery":
             m "Interesting choice, indeed!"
             m "You see, mystery can be one of my go-to choices in terms of picking movies."
             m "If well done, they can grasp your attention since the very beginning..."
             m "...and the mysteries can be so well fabricated they may submerge you into the plot all the way!"
             m "I hope watching that movie was a great experience. Now we can hang out for a little bit. Hehehe~"
-        "cartoon movie/anime":
 
+        "cartoon movie/anime":
             m "A cartoon movie! That´s sweet!"
             m "You know, I would not mind at all if you wanted to take me to watch some animated media when I cross over."
             m "I might not be accustomed to it, but, if it´s for you, I will definitely give it a try!"

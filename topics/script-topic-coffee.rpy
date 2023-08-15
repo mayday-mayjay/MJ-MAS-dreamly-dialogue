@@ -1,4 +1,3 @@
-
 #coffee palette
 init 5 python:
     addEvent(

@@ -44,6 +44,7 @@ menu:
         extend " tea, soda, water, and at least a dozen other things to choose from."
         m "But if coffee isn't something you like..."
         m "What is then?{nw}"
+        #hist pop here
 
         menu:
             m "What is then?{fast}"

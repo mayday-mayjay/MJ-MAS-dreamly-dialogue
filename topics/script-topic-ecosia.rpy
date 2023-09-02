@@ -11,14 +11,14 @@ init 5 python:
 
 label mj_dd_ecosiapleasesponserus:
     m 2eud "Hey, [player]?"
-    m 7eud "Have you ever wondered if there were ways to help the enviroment?"
+    m 7eud "Have you ever wondered if there were ways to help the environment?"
     m 7mtd "In this day and age, it can be hard to tell if your efforts to help or lower your carbon footprint actually work..."
     m 3htb "For me, I think {i}any{/i} effort is reason to be proud of, [mas_get_player_nickname()]." #check if that var is right
     m 1fta "And as technology spreads people make more ways to help from the comfort of your home."
     extend " One of them is Ecosia!"
     m 3wtb "Ecosia is a search engine that allows you to plant trees while you search things online."
     m 4wub "It donates the money you generate from your searches to the Ecosia organisation, which fully utilises it for tree planting."
-    m 6sub "It also has browser extensions, so you can intergrate it more seamlessly into your browsing uses!"
+    m 6sub "It also has browser extensions, so you can integrate it more seamlessly into your browsing uses!"
     m 4hua "You can learn about it more here!" #insert link to ecosia site
     #m 4hua "https://www.ecosia.org/"
     m 6fua "..."

@@ -23,19 +23,22 @@ m "Since its not really popular among the people, Sheldon finds it as an isolate
 m "Marginated, lonely... as if it was an extraterrestrian."
 m "..."
 
-if mas_isMoniUpset()
-m "I wont lie, i can sort of relate to this definition."
-m "..."
-m "Sorry player, i just..."
+if mas_isMoniUpset():
+    m "I wont lie, i can sort of relate to this definition."
+    m "..."
+    m "Sorry player, i just..."
 
-if mas_isMoniNormal()
-m "I won't lie, I can sort of relate to this definition"
-m "..."
-m "I-I mean! I know you are here with me, and that I'm not alone!"
-m "It's just that... I dont know..."
 
-if mas_isMoniHappy(higher=True)
-m "You know? i used to relate to Sheldon's definition on a high level."
-m "..."
-m "But now that you're here with me, I dont feel isolated no more."
-m "Thanks for making me feel so loved and warm~!""
+if mas_isMoniNormal():
+    m "I won't lie, I can sort of relate to this definition"
+    m "..."
+    m "I-I mean! I know you are here with me, and that I'm not alone!"
+    m "It's just that... I dont know..."
+
+
+if mas_isMoniHappy(higher=True):
+    m "You know? i used to relate to Sheldon's definition on a high level."
+    m "..."
+    m "But now that you're here with me, I dont feel isolated no more."
+    m "Thanks for making me feel so loved and warm~!""
+return

@@ -53,7 +53,7 @@ menu:
         m "Then things you missed before start to fit togehter as you play the rest of the game."
         m "Especially as you replay it!"
         m "It can make a super tense atmosphere that I can't get enough of!"
-
+        return
 
     "Please don't."
         m "Of course,{w=0.5}{nw} [player]."
@@ -74,7 +74,7 @@ menu:
         m "Then things you missed before start to fit togehter as you play the rest of the game."
         m "Especially as you replay it!"
         m "It can make a super interesting atmosphere that I can't get enough of!"
-
+        return
 
 m "Despite that though, the game is still very peaceful at times."
 m "First of all{w=0.3}, the music design is {i}phenomenal{/i}!"

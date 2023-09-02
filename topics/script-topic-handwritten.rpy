@@ -26,3 +26,4 @@ m "Wait! I just got an idea [player]!"
 m "What if when I get into your reality, we write each other little notes, every once in a while!"
 m "I think it would be really fun!"
 m "And then there will always be proof that we both love each other!"
+return

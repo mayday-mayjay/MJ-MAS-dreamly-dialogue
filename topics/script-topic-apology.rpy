@@ -37,3 +37,5 @@ label mj_dd_playerisoffended:
             m "I never intend to ever hurt you in any form."
             m "I promise I'll try to be more careful so as to not offend you in any way."
             m "I love you so much and it hurts me to see you in any type of pain."
+
+        return

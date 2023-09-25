@@ -3,7 +3,7 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mj_dd_playerisoffended", # /j
-            category=["example", "topic"], # list of categories this topic belongs in (These are automatically capitalized)
+            category=["You", "Monika"], # list of categories this topic belongs in (These are automatically capitalized)
             prompt="You offended me.", # button text
             random=True
         )
